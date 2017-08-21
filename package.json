@@ -1,0 +1,23 @@
+{
+  "name": "aws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hey.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwenke01/JS_AWS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwenke01/JS_AWS/issues"
+  },
+  "homepage": "https://github.com/lwenke01/JS_AWS#readme",
+  "dependencies": {
+    "claudia-api-builder": "^2.5.1",
+    "superb": "^1.3.0"
+  }
+}
