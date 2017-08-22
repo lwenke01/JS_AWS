@@ -1,9 +1,9 @@
 'use strict';
 
 var ApiBuilder = require('claudia-api-builder'),
-  // AWS = require('aws-sdk'),
+  AWS = require('aws-sdk'),
   api = new ApiBuilder(),
-  // dynamoDb = new AWS.DynamoDB.DocumentClient();
+  dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 
 module.exports = api;

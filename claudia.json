@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "aws-executor",
+    "name": "aws",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "oph0flydye",
+    "module": "app"
+  }
+}
