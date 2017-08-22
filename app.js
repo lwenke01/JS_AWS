@@ -8,8 +8,10 @@ var ApiBuilder = require('claudia-api-builder'),
 
 module.exports = api;
 
-// api.get('/hello', function(){
-//   return 'hello world';
+
+
+// api.get('/hello', function(request){
+//   return request;
 // });
 
 api.get('/greet', function (request) {
