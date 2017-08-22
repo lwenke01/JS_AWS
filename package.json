@@ -1,7 +1,7 @@
 {
   "name": "aws",
   "version": "1.0.0",
-  "description": "",
+  "description": "Slack Bot Using Claudia.js, AWS Lambda, Node.js",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,10 @@
   "homepage": "https://github.com/lwenke01/JS_AWS#readme",
   "dependencies": {
     "aws-sdk": "^2.102.0",
+    "aws-serverless-express": "^3.0.2",
     "claudia-api-builder": "^2.5.1",
+    "claudia-bot-builder": "^2.15.0",
+    "express": "^4.15.4",
     "superb": "^1.3.0"
   }
 }
