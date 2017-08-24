@@ -1,1 +1,7 @@
 stdlib/.stdlb
+.babelrc
+app.js
+claudia.json
+giphy.js
+index.html
+index.js
