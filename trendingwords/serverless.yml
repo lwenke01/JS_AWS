@@ -61,7 +61,7 @@ functions:
 
 resources:
   Resources:
-    donkeyjobs:
+    trendwords:
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: trendwords
