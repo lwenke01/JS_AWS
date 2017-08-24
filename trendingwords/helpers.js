@@ -2,7 +2,7 @@
 
 const cheerio = require('cheerio');
 const moment = require('moment');
-const fs = require('fs');
+
 
 
 function extractListingsFromHTML (html) {
@@ -25,7 +25,7 @@ function extractListingsFromHTML (html) {
     newTrends.push({tId, trend_date, title, link,meaning, example});
 
   });
-     fs.appendFileSync('words.json', JSON.stringify(newTrends) + '\n');
+  
   return newTrends;
 }
 

@@ -1,5 +1,4 @@
 'use strict';
-
 const request = require('axios');
 const AWS = require('aws-sdk');
 const nodemailer = require('nodemailer');
@@ -55,19 +54,19 @@ module.exports.gettrendwords = (event, context, callback) => {
   .then(()=>{
     if (newWords.length) {
       let transporter = nodemailer.createTransport(mailBox);
+      arielnllm@gmail.com
+      let emailList= ["lwenke@gmail.com", "arielnllm@gmail.com", "caitlinm@imagemill.com","adrianameharry@gmail.com","wisforwilliam@gmail.com"];
+      emailList.forEach((email)=>{
 
       var mailOptions = {
                   from: '"Trending Slang" <trendingslang@gmail.com>', // sender address
-                  to: 'lwenke@gmail.com',
-                  subject: 'Daily Slang: "' + newWords[0].title+'"', // Subject line
+                  to: email,
+                  subject: 'Slang Of The Day: "' + newWords[0].title+'"', // Subject line
                   html:
-                  '<a href='+url+newWords[0].link +'><h3> "'+ newWords[0].title +'"</h3></a>'
-                  +'<br>'
+                  '<h1 style="color:magenta;"> "'+ newWords[0].title +'"</h1>'
                   +'<p><strong>'+newWords[0].meaning +' </strong> </p>'
-                  +'<br>'
-                  +'<p><em>Example: </em> '+newWords[0].example +'</p>'
-                  +'<br>'
-                  +'<a href='+url+newWords[0].link +'><h5>Link here</h5></a>'
+                  +'<p"><em>  '+newWords[0].example +'</em></p>'
+
               };
 
               transporter.sendMail(mailOptions, function(error, info) {
@@ -80,6 +79,7 @@ module.exports.gettrendwords = (event, context, callback) => {
                   }
 
               });
+            })
 
 
      }
