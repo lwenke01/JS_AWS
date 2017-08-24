@@ -1,13 +1,13 @@
 {
-  "name": "aws",
-  "version": "1.0.0",
-  "description": "Slack Bot Using Claudia.js, AWS Lambda, Node.js",
+  "name": "Trending Slang Website Scraper",
+  "version": "1.2.0",
+  "description": "Slang Word Daily mailer built using AWS Lambda,DynamoDB, Node.js",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel --presets es2015 app.js -o build/app.bundle.js",
-    "start": "http-server",
-    "claudia": "claudia update"
+    "getWords": "serverless invoke local --function gettrendwords",
+    "deploy":"serverless deploy"
+
   },
   "repository": {
     "type": "git",
@@ -21,20 +21,17 @@
   "homepage": "https://github.com/lwenke01/JS_AWS#readme",
   "dependencies": {
     "aws-sdk": "^2.102.0",
-    "aws-serverless-express": "^3.0.2",
-    "claudia-api-builder": "^2.5.1",
-    "claudia-bot-builder": "^2.15.0",
-    "express": "^4.15.4",
-    "jquery": "^3.2.1",
-    "superb": "^1.3.0"
+    "aws-serverless-express": "^3.0.2"
   },
   "devDependencies": {
     "axios": "^0.16.2",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
-    "cheerio": "^1.0.0-rc.2",
-    "http-server": "^0.10.0"
-  }
+    "cheerio": "^1.0.0-rc.2"
+  },
+  "keywords":[
+    "Lambda",
+    "DynamoDB",
+    "nodemailer",
+    "web scraper"
+  ]
+
 }
