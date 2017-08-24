@@ -6,3 +6,6 @@ jspm_packages
 .serverless
 
 config.js
+
+words.json
+package-lock.json

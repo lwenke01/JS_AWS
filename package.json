@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "getWords": "serverless invoke local --function gettrendwords",
-    "deploy":"serverless deploy"
-
+    "deploy": "serverless deploy"
   },
   "repository": {
     "type": "git",
@@ -21,17 +20,17 @@
   "homepage": "https://github.com/lwenke01/JS_AWS#readme",
   "dependencies": {
     "aws-sdk": "^2.102.0",
-    "aws-serverless-express": "^3.0.2"
+    "axios": "^0.16.2",
+    "cheerio": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "axios": "^0.16.2",
     "cheerio": "^1.0.0-rc.2"
   },
-  "keywords":[
+  "keywords": [
     "Lambda",
     "DynamoDB",
     "nodemailer",
     "web scraper"
   ]
-
 }
