@@ -10,12 +10,16 @@ module.exports = api;
 
 
 
-// api.get('/hello', function(request){
-//   return request;
-// });
-
-api.get('/greet', function (request) {
-  var superb = require('superb');
-  console.log(request);
-  return request.queryString.name + ' is ' + superb();
+api.get('/fail', function(request){
+  return 'Lisa rocks';
 });
+
+api.post('/fail', function(request){
+  return 'Lisa rocks';
+});
+// api.get('/fail', function (request) {
+//
+//   var superb = require('superb');
+//   console.log(request);
+//   return request.queryString.name + ' is ' + superb();
+// });
