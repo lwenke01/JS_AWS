@@ -5,7 +5,8 @@ const nodemailer = require('nodemailer');
 const dynamo = new AWS.DynamoDB.DocumentClient();
 const { differenceWith, isEqual } = require('lodash');
 const { extractListingsFromHTML } = require('./helpers');
-const { mailBox } = require('./config');
+const { mailBox, sender } = require('./config');
+const { emailList } = require('./emails');
 
 let url = 'http://www.urbandictionary.com/';
 
@@ -52,20 +53,22 @@ module.exports.gettrendwords = (event, context, callback) => {
     }).promise();
   })
   .then(()=>{
+    console.log(sender);
+
     if (newWords.length) {
       let transporter = nodemailer.createTransport(mailBox);
-      arielnllm@gmail.com
-      let emailList= ["lwenke@gmail.com", "arielnllm@gmail.com", "caitlinm@imagemill.com","adrianameharry@gmail.com","wisforwilliam@gmail.com"];
+
       emailList.forEach((email)=>{
 
-      var mailOptions = {
-                  from: '"Trending Slang" <trendingslang@gmail.com>', // sender address
+        let mailOptions = {
+                  from: sender, // sender address
                   to: email,
                   subject: 'Slang Of The Day: "' + newWords[0].title+'"', // Subject line
                   html:
-                  '<h1 style="color:magenta;"> "'+ newWords[0].title +'"</h1>'
+                  '<h1 style="color:magenta;"> '+ newWords[0].title +'</h1>'
                   +'<p><strong>'+newWords[0].meaning +' </strong> </p>'
                   +'<p"><em>  '+newWords[0].example +'</em></p>'
+                  +'<br>'
 
               };
 
@@ -74,9 +77,7 @@ module.exports.gettrendwords = (event, context, callback) => {
                       return console.log(error);
                   } else {
                       console.log('emails sent: ', info.response);
-
-
-                  }
+                    }
 
               });
             })

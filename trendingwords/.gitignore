@@ -6,6 +6,6 @@ jspm_packages
 .serverless
 
 config.js
-
+emails.js
 words.json
 package-lock.json
