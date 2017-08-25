@@ -77,9 +77,7 @@ module.exports.gettrendwords = (event, context, callback) => {
                       return console.log(error);
                   } else {
                       console.log('emails sent: ', info.response);
-
-
-                  }
+                    }
 
               });
             })
